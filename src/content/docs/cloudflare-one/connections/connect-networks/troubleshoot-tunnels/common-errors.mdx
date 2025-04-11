@@ -165,6 +165,10 @@ To ping an IP address behind Cloudflare Tunnel, your system must allow ICMP traf
    cloudflared tunnel run --icmpv4-src <IP of primary interface>
    ```
 
+:::note[Non-persistent change]
+This process is not persistent and the ping groups will reset to default values after rebooting the machine. 
+:::
+
 </TabItem> <TabItem label="Docker" icon="seti:docker">
 
 In your environment, modify the `ping_group_range` parameter to include the Group ID (GID) of the user running `cloudflared`.
